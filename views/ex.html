@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/calendar2.png" type="image/png" size="16x16">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Navigation Bar Styling */
+    nav {
+      background: #00684A;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #a5d6a7;
+    }
+
+    /* Profile Page Content */
+    .profile-container {
+      margin: 20px;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    .profile-header {
+      text-align: center;
+      margin: 20px 0;
+      color: #00684A;
+    }
+
+    .profile-details {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-details h3 {
+      color: #00684A;
+      margin-bottom: 15px;
+    }
+
+    .profile-details p {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="brand">Smart Time Table Scheduler</div>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="profile-container">
+    <h1 class="profile-header">Profile Page</h1>
+    <div class="profile-details">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+      <p><strong>Role:</strong> Teacher</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
