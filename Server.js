@@ -6,10 +6,13 @@ var passport = require('passport');
 var passportlocal = require('passport-local');
 var user = require("./Database/user");
 var express = require('express');
+const path = require('path');
 
 mongoose.connect("mongodb+srv://bhaargav04:2005@cluster04.hvozw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster04/Google");
 var app = express();
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bp.urlencoded({ extended: true }));
 app.use(require("express-session")
 ({
@@ -20,7 +23,7 @@ app.use(require("express-session")
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 
 passport.use(new passportlocal(user.authenticate()));
