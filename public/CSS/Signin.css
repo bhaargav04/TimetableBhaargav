@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://c1.wallpaperflare.com/preview/396/966/331/pencils-clips-colour-pencils-foam-rubber.jpg);
+    background-image: url(/images/pencil.jpg);
     background-size: cover;
     background-repeat: no-repeat;
  }
