@@ -1,8 +1,8 @@
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const periods = ["1st Period", "2nd Period", "3rd Period", "4th Period", "5th Period"];
 const classes = [];
-const globalStaff = {}; // Tracks globally unique staff
-const schedule = {}; // Tracks assigned staff for each day and period
+const globalStaff = {}; 
+const schedule = {}; 
 
 function addClass() {
   const className = document.getElementById('className').value.trim();
@@ -52,7 +52,6 @@ function addStaff() {
     alert("Please enter valid staff details.");
     return;
   }
-  // Ensure global uniqueness of staff name
   if (!globalStaff[staffName]) {
     globalStaff[staffName] = {
       name: staffName,
@@ -60,12 +59,10 @@ function addStaff() {
     };
   }
   const globalStaffEntry = globalStaff[staffName];
-  // Check if this staff is already added to the selected class
   if (globalStaffEntry.assignedClasses[classIndex]) {
     alert(`Staff member "${staffName}" is already assigned to this class.`);
     return;
   }
-  // Add staff to the class with specific details
   const staff = {
     name: staffName,
     maxClasses,
@@ -104,11 +101,8 @@ function updateStaffList() {
 }
 function removeStaff(classIndex, staffIndex) {
   const staff = classes[classIndex].staffList[staffIndex];
-  // Remove the staff from the selected class
   classes[classIndex].staffList.splice(staffIndex, 1);
-  // Remove the staff reference from the global registry for this class
   delete globalStaff[staff.name].assignedClasses[classIndex];
-  // Update the displayed staff list
   updateStaffList();
 }
 function generateTimetables() {
@@ -154,7 +148,7 @@ function generateTimetables() {
           subject = selectedStaff.subjects[subjectIndex];
           staffAssigned = selectedStaff;
           staffAssigned.assignedClasses++;
-          schedule[periodKey] = staffAssigned.name; // Mark as assigned
+          schedule[periodKey] = staffAssigned.name; 
         }
         const cell = document.createElement('td');
         cell.innerHTML = staffAssigned ? `${subject}<br><small>${staffAssigned.name}</small>` : "No Staff Assigned";
@@ -164,23 +158,16 @@ function generateTimetables() {
     });
     timetableContainer.appendChild(timetable);
   });
-  // Reset assignedClasses after timetable generation
   classes.forEach(cls => cls.staffList.forEach(staff => staff.assignedClasses = 0));
-  // Make the download button visible
   document.getElementById('downloadPdfButton').style.display = 'block';
   document.getElementById('tt').style.display = 'block';
 }
-
 function downloadTimetablePDF() {
   const element = document.getElementById('timetableContainer');
   const fileName = prompt("Enter a filename for the PDF:", "timetable.pdf");
-
-  // If the user presses "Cancel" in the prompt, fileName will be null
   if (fileName === null) {
     alert("Download cancelled.");
     return; // Exit the function
   }
-
-  // Proceed with the PDF generation and download
   html2pdf().from(element).save(fileName);
 }

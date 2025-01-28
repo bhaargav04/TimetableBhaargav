@@ -10,39 +10,25 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
  }
- 
- 
- 
- 
- .container {
+  .container {
     background-color: aliceblue;
     padding: 30px;
     border-radius: 10px;
     border: solid 5px rgb(30, 158, 243);
     width: 330px;
  }
- 
- 
- .input-group {
+  .input-group {
     margin-bottom: 15px;
     text-align: left;
  }
- 
- 
- 
- 
- .container label {
+  .container label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
     margin: 10px;
  }
- 
- 
- 
- 
- .container input {
+  .container input {
     width: 90%;
     padding: 10px;
     /* border: 1px solid rgb(23, 235, 104); */
@@ -51,11 +37,7 @@ body {
     font-size: 16px;
     margin: 10px;
  }
- 
- 
- 
- 
- button {
+  button {
     width: 90%;
     padding: 10px;
     border: none;
@@ -66,11 +48,7 @@ body {
     cursor: pointer;
     margin: 10px;
  }
- 
- 
- 
- 
- button:hover {
+  button:hover {
     background-color: #00796B;
     }
  a{

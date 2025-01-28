@@ -2,7 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: Arial, sans-serif;
 }
 .container {
@@ -153,11 +154,4 @@ nav {
       padding: 12px 24px;
       font-size: 18px;
   }
-  /* .s1 {
-      right: 10px;
-      i{
-        display: block;
-      }
-  } */
- 
-}
+ }

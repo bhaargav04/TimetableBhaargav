@@ -9,13 +9,8 @@ body {
     background-image: url(/images/pencil.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-  
- }
- 
- 
- 
- 
- .container {
+   }
+  .container {
     background-color: #ffffff;
     padding: 25px;
     border-radius: 10px;
@@ -23,38 +18,18 @@ body {
     width: 330px;
     text-align: center;
  }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- .input-group {
+   .input-group {
     margin-bottom: 15px;
     text-align: left;
  }
- 
- 
- 
- 
- .container label {
+  .container label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
     margin: 10px;
  }
- 
- 
- 
- 
- .container input {
+  .container input {
     width: 90%;
     padding: 10px;
     border: 2px solid #179bcf6e;
@@ -62,11 +37,7 @@ body {
     font-size: 16px;
     margin: 10px;
  }
- 
- 
- 
- 
- button {
+  button {
     width: 97%;
     padding: 10px;
     border: none;
@@ -77,11 +48,7 @@ body {
     cursor: pointer;
     margin: 10px;
  }
- 
- 
- 
- 
- button:hover {
+  button:hover {
     background-color: #00796B;
     }
  a{
