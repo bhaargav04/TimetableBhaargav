@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var passportlocalmongoose = require('passport-local-mongoose');
 var passport = require('passport');
 var passportlocal = require('passport-local');
-var user = require("./Database/user");
+var user = require("./Database/User");
 var express = require('express');
 const path = require('path');
 
